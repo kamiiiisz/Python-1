@@ -37,6 +37,7 @@ def deposito(valor,saldo):
     return saldo
 
 def saque(saque,saldo):
+
    global  numero_saques,limites,limites_saques
     #De acordo com a documentação Python , váriaveis globais não ficam presas ao limite do escopo da função.
    if numero_saques >= limites_saques:
@@ -52,4 +53,10 @@ def saque(saque,saldo):
             saldo -= saque
             numero_saques += 1
             
-        return saldo        
+        return saldo     
+
+def extrato (saldo):
+     hora = datetime.now() #Obtem a hora atual
+     horaatual = hora.strftime('%d,%m,%Y,%H:%M')
+     print('==========extrato===========')
+     print(f {horaatual})\nSaldo disponivel 
